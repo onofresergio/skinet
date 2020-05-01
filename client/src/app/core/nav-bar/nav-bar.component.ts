@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,8 +6,6 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-
-  faCoffee = faCoffee;
 
   constructor() { }
 
