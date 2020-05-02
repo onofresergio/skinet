@@ -1,3 +1,4 @@
+import { CarouselComponent } from 'ngx-bootstrap/carousel';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
