@@ -1,3 +1,4 @@
+import { BasketService } from './basket/basket.service';
 import { IPagination } from './shared/models/pagination';
 import { IProduct } from './shared/models/products';
 import { Component, OnInit } from '@angular/core';
@@ -12,9 +13,16 @@ export class AppComponent implements OnInit {
 
   title = 'Skinet';
 
-    constructor(){}
+    constructor(private basketService: BasketService){}
 
   ngOnInit() {
-
+    const basketId = localStorage.getItem('basket_id');
+    if (basketId) {
+      this.basketService.getBasket(basketId).subscribe(() => {
+        console.log('Initialized basket');
+      }, error => {
+        console.log(error);
+      });
+    }
   }
 }
